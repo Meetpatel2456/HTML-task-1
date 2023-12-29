@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+form{
+    margin-top: 14%;
+    z-index: 99;
+}
+
+@media screen and (max-width: 9400px) {
+    header span{
+       display: flex;
+    }
+ }
+.form{
+    min-height: 100vh;
+    max-width: 1920px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 40px 30px;
+}
+.header a{
+    text-decoration: none;
+}
+.header .bn-dropbox{
+    color: #4267b2;
+    float: left;
+    margin-left: 10px;
+    padding: 10px;
+    border: 2px solid #4267b2;
+    border-radius: 5px;
+    font-weight: 600;
+}
+@media screen and (max-width: 950px){
+    .header .bn-dropbox{
+        display: none;
+    }
+}
+.header .dn-dropbox{
+    color: #4267b2;
+    float: right;
+    margin-right: 30px;
+}
+@media screen and (max-width: 960px){
+    .header .dn-dropbox{
+        display: none;
+    }
+}
+.header span{
+    font-size: 36px;
+    position: fixed;
+    left: 40%;
+    right: 40%;
+    
+}
+.header span i{
+    align-items: center;
+    justify-content: space-between;
+    color: #4267b2;
+    height: 40px;
+    width: 36px;
+}
+.from form{
+    height: 100%;
+    width:100%;
+}
+.form .form-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-content .login-form{
+    width: 40%;
+    position: relative;
+    left: 5%;
+}
+.form-content .login-form,
+.form-content .image{
+    width:calc(100% / 2 -25px);
+}
+@media screen and (max-width: 800px) {
+    .form-content .image img{
+        display: none;
+    }
+}
+@media screen and (max-width: 900px) {
+    .form-content .title .t-title{
+        display: none;
+    }
+}
+@media screen and (max-width: 800px) {
+    .form-content .title span{
+        display: flex;
+    }
+}
+@media screen and (max-width: 600px) {
+    .form-content .google-signin span{
+        display: none;
+    }
+    .form-content .apple-signin span{
+        display: none;
+    }
+}
+
+form .form-content .title{
+    width: 100%;
+    display: inline-flex;
+    font-size: 36px;
+    font-weight: 600;
+}
+form .form-content .title span{
+    font-size: 16px;
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    margin: 2px;
+    transform: translateY(-50%);
+}
+form .form-content .title span a{
+    text-decoration: none;
+    color: #4267b2;
+}
+form .form-content .title span a:hover{
+    color: #020da5;
+}
+form .form-content .title:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 25px;
+}
+
+form .form-content .input-boxes{
+    margin-top: 30px;
+}
+form .form-content .input-box{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin: 15px 0;
+}
+.form-content .input-box input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 30px;
+    font-size: 18px;
+}
+.form-content .input-box input:focus{
+    border-color: #6a6a6a;
+}
+form .form-content .login-button{
+    float: right;
+    clear: both;
+}
+/*form.form-content .group{
+    display: inline-flex;
+}*/
+form .form-content .login-button button{
+    color: #fff;
+    background: #4267b2;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+    
+}
+form .form-content .login-button button:hover{
+    background-color: #020da5;
+}
+form .form-content .signup-button button{
+    color: #fff;
+    background: #4267b2;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: all 0.4s ease; 
+}
+/*.container{
+    height: 36px;
+    width: 100%;
+}*/
+form .form-content .signup-button{
+    float: right;
+    clear: both;
+}
+form .form-content .signup-button button:hover{
+    background-color: #020da5;
+}
+
+form .form-content .checkbox input{
+    margin-right: 5px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+form .form-content .text{
+    margin-top: 20px;
+}
+form .form-content .text a{
+    text-decoration: none;
+}
+
+form .form-content .google-signin a{
+    color: #fff;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: #4267b2;
+    border-radius: 5px;
+}
+form .form-content .google-signin a:hover{
+    background-color: #2555b5;
+}
+form .form-content .google-signin a i{
+    color: #fff;
+}
+form .form-content .google-signin a .fa-google{
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fa-google{
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    transform: translateY(-50%);
+}
+form .form-content .apple-signin a{
+    color: #fff;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    margin-top: 24px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: #121212;
+    border-radius: 5px;
+}
+form .form-content .apple-signin a:hover{
+    background-color: #000;
+}
+form .form-content .apple-signin a i{
+    color: #fff;
+}
+form .form-content .apple-signin a .fa-apple{
+    color: #fff;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fa-apple{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+.line {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 36px, 0;
+    background-color: #d4d4d4;
+}
+.line::before {
+    content: "or";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0px 15px ;
+    background-color: #fff;
+    color: #000000;
+}
