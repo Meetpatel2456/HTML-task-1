@@ -42,11 +42,11 @@ body{
     border-radius: 5px;
     font-weight: 600;
 }
-/* @media screen and (max-width: 950px){
+@media screen and (max-width: 950px){
     .header .bn-dropbox{
         display: none;
     }
-} */
+}
     /*   Try Bussiness Link  CSS End   */
 
     /*   Logo and title CSS   */
@@ -72,11 +72,11 @@ body{
     float: right;
     margin-right: 30px;
 }
-/* @media screen and (max-width: 960px){
+@media screen and (max-width: 960px){
     .header .dn-dropbox{
         display: none;
     }
-} */
+} 
     /*   Download Link CSS End   */
 
 
@@ -97,7 +97,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10%;
+    margin-top: 6%;
 }
 
 /*    profile image CSS   */
@@ -131,6 +131,29 @@ body{
     display: inline-flex;
     font-size: 36px;
     font-weight: 600;
+}
+@media screen and (max-width: 490px) {
+    .form-container .form-content .title .t-title{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 490px) {
+    .form-container .form-content .title .create-account{
+        font-size: 6px; 
+        position: relative;
+        top: 50%;  
+    }
+}@media screen and (max-width: 380px) {
+    .form-container .form-content .title .t-title{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 380px) {
+    .form-container .form-content .title .create-account{
+        font-size: 6px; 
+        position: relative;
+        top: 50%;  
+    }
 }
 .form-container .form-content .title:before{
     content: '';
