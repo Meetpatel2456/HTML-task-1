@@ -127,6 +127,7 @@ body{
 /*     Title CSS      */
 .form-container .form-content .title{
     width: 100%;
+    min-width: auto;
     display: inline-flex;
     font-size: 36px;
     font-weight: 600;
