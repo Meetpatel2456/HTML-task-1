@@ -12,19 +12,8 @@ body{
     justify-content: center;
     background-color: #fff;
 }
+/*   Body CSS End  */
 
-form{
-    margin-top: 14%;
-    z-index: 99;
-}.head{
-    border-bottom: 3px solid #000;
-    margin: 50px;
-}
-@media screen and (max-width: 9400px) {
-    header span{
-       display: flex;
-    }
- }
 .form{
     min-height: 100vh;
     max-width: 1920px;
@@ -33,9 +22,13 @@ form{
     background-color: #fff;
     padding: 40px 30px;
 }
+/*    Header CSS    */
+
 .header a{
     text-decoration: none;
 }
+
+  /*   Try Bussiness Link  CSS   */
 .header .bn-dropbox{
     color: #4267b2;
     float: left;
@@ -44,61 +37,111 @@ form{
     border: 2px solid #4267b2;
     border-radius: 5px;
     font-weight: 600;
-    clear: both;
 }
 @media screen and (max-width: 950px){
     .header .bn-dropbox{
         display: none;
     }
 }
+    /*   Try Bussiness Link  CSS End   */
+
+    /*   Logo and title CSS   */
+.header .dropbox{
+    font-size: 34px; 
+    position: relative;
+    z-index: 1;  
+}
+.fa-dropbox{
+    color: #4267b2;
+    font-size: 480px;
+}
+@media screen and (max-width: 940px) {
+    .header .dropbox{
+       display: flex;
+    }
+ }
+    /*   Logo and title CSS End  */
+
+    /*   Download Link CSS   */
 .header .dn-dropbox{
     color: #4267b2;
     float: right;
     margin-right: 30px;
-    clear: both;
 }
 @media screen and (max-width: 960px){
     .header .dn-dropbox{
         display: none;
     }
 }
-.header span{
-    font-size: 36px;
-    position: absolute;
-    left: 40%;
-    right: 40%;
-    
-}
-.header span i{
-    align-items: center;
-    justify-content: space-between;
-    color: #4267b2;
-    height: 40px;
-    width: 36px;
-}
-.from form{
+    /*   Download Link CSS End   */
+
+
+/*     Header CSS End    */
+
+/*     From CSS      */
+.from .form-container{
     height: 100%;
     width:100%;
+    margin-top: 14%;
+    z-index: 99;
 }
+
 .form .form-content{
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.form-content .login-form,
+.form-content .image-profile{
+    width:calc(100% / 2 -25px);
+}
+@media screen and (max-width: 800px) {
+    .form-content .image-profile .profile{
+        display: none;
+    }
+}
+
+
 .form-content .login-form{
     width: 40%;
     position: relative;
     left: 5%;
 }
-.form-content .login-form,
-.form-content .image{
-    width:calc(100% / 2 -25px);
+
+.form-container .form-content .title{
+    width: 100%;
+    display: inline-flex;
+    font-size: 36px;
+    font-weight: 600;
 }
-@media screen and (max-width: 800px) {
-    .form-content .image img{
-        display: none;
-    }
+.form-container .form-content .title:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 25px;
 }
+
+/*     Sign up Link CSS    */
+.form-container .form-content .title span{
+    font-size: 16px;
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    margin: 2px;
+    transform: translateY(-50%);
+}
+.form-container .form-content .title span a{
+    text-decoration: none;
+    color: #4267b2;
+}
+.form-container.form-content .title span a:hover{
+    color: #020da5;
+}
+/*     Sign up Link CSS End    */
+
 @media screen and (max-width: 900px) {
     .form-content .title .t-title{
         display: none;
@@ -109,125 +152,10 @@ form{
         display: flex;
     }
 }
-@media screen and (max-width: 600px) {
-    .form-content .google-signin span{
-        display: none;
-    }
-    .form-content .apple-signin span{
-        display: none;
-    }
-}
 
-form .form-content .title{
-    width: 100%;
-    display: inline-flex;
-    font-size: 36px;
-    font-weight: 600;
-}
-form .form-content .title span{
-    font-size: 16px;
-    display: flex;
-    position: absolute;
-    top: 20px;
-    right: 0;
-    margin: 2px;
-    transform: translateY(-50%);
-}
-form .form-content .title span a{
-    text-decoration: none;
-    color: #4267b2;
-}
-form .form-content .title span a:hover{
-    color: #020da5;
-}
-form .form-content .title:before{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 25px;
-}
 
-form .form-content .input-boxes{
-    margin-top: 30px;
-}
-form .form-content .input-box{
-    display: flex;
-    align-items: center;
-    height: 50px;
-    width: 100%;
-    margin: 15px 0;
-}
-.form-content .input-box input{
-    height: 100%;
-    width: 100%;
-    outline: none;
-    padding: 0 30px;
-    font-size: 18px;
-}
-.form-content .input-box input:focus{
-    border-color: #6a6a6a;
-}
-form .form-content .login-button{
-    float: right;
-    clear: both;
-}
-/*form.form-content .group{
-    display: inline-flex;
-}*/
-form .form-content .login-button button{
-    color: #fff;
-    background: #4267b2;
-    font-size: 18px;
-    font-weight: 600;
-    text-align: center;
-    padding: 10px 15px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    transition: all 0.4s ease;
-    
-}
-form .form-content .login-button button:hover{
-    background-color: #020da5;
-}
-form .form-content .signup-button button{
-    color: #fff;
-    background: #4267b2;
-    font-size: 18px;
-    font-weight: 600;
-    text-align: center;
-    padding: 10px 15px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    transition: all 0.4s ease; 
-}
-/*.container{
-    height: 36px;
-    width: 100%;
-}*/
-form .form-content .signup-button{
-    float: right;
-    clear: both;
-}
-form .form-content .signup-button button:hover{
-    background-color: #020da5;
-}
-
-form .form-content .checkbox input{
-    margin-right: 5px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
-
-form .form-content .text{
-    margin-top: 20px;
-}
-form .form-content .text a{
-    text-decoration: none;
-}
-
-form .form-content .google-signin a{
+/*  Google Log in Button CSS   */
+.form-container .form-content .google-signin a{
     color: #fff;
     position: relative;
     height: 50px;
@@ -240,13 +168,13 @@ form .form-content .google-signin a{
     background: #4267b2;
     border-radius: 5px;
 }
-form .form-content .google-signin a:hover{
+.form-container .form-content .google-signin a:hover{
     background-color: #2555b5;
 }
-form .form-content .google-signin a i{
+.form-container .form-content .google-signin a i{
     color: #fff;
 }
-form .form-content .google-signin a .fa-google{
+.form-container .form-content .google-signin a .fa-google{
     color: #fff;
     font-size: 20px;
     display: flex;
@@ -259,7 +187,10 @@ form .form-content .google-signin a .fa-google{
     left: 13px;
     transform: translateY(-50%);
 }
-form .form-content .apple-signin a{
+/*    Google Sign in Button CSS End    */
+
+/*    Apple Sign in Button CSS    */
+.form-container .form-content .apple-signin a{
     color: #fff;
     position: relative;
     height: 50px;
@@ -273,13 +204,13 @@ form .form-content .apple-signin a{
     background: #121212;
     border-radius: 5px;
 }
-form .form-content .apple-signin a:hover{
+.form-container .form-content .apple-signin a:hover{
     background-color: #000;
 }
 form .form-content .apple-signin a i{
     color: #fff;
 }
-form .form-content .apple-signin a .fa-apple{
+.form-container .form-content .apple-signin a .fa-apple{
     color: #fff;
     font-size: 26px;
     display: flex;
@@ -293,6 +224,16 @@ form .form-content .apple-signin a .fa-apple{
     transform: translateY(-50%);
 }
 
+
+@media screen and (max-width: 600px) {
+    .form-content .google-signin span{
+        display: none;
+    }
+    .form-content .apple-signin span{
+        display: none;
+    }
+}
+/*    Apple Sign in Button CSS End*/
 .line {
     position: relative;
     height: 1px;
@@ -311,10 +252,108 @@ form .form-content .apple-signin a .fa-apple{
     color: #000000;
 }
 
-.border {
+/*    Log in Details CSS   */
+.form-container .form-content .input-boxes{
+    margin-top: 30px;
+}
+.form-container .form-content .input-box{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin: 15px 0;
+}
+/*    Email & Password Input Field CSS    */
+.form-content .input-box input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 30px;
+    font-size: 18px;
+}
+.form-content .input-box input:focus{
+    border-color: #6a6a6a;
+}
+/*    Email & Password Input Field CSS End    */
+
+/*    checkbox CSS    */
+.form-container .form-content .checkbox input{
+    margin-right: 5px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+/*    checkbox CSS End    */
+
+/*    Forget Password CSS   */
+.form-container .form-content .text{
+    margin-top: 20px;
+}
+.form-container .form-content .text a{
+    text-decoration: none;
+}
+/*    Forget Password CSS End   */
+
+/*    Login Button CSS    */
+.form-container .form-content .login-button{
+    float: right;
+    clear: both;
+}
+/*form.form-content .group{
+    display: inline-flex;
+}*/
+.form-container .form-content .login-button button{
+    color: #fff;
+    background: #4267b2;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+    
+}
+.form-container .form-content .login-button button:hover{
+    background-color: #020da5;
+}
+/*    Login Button CSS End     */
+
+/*     Form CSS End     */
+
+
+/*    Sign up Button CSS      */
+.form-container .form-content .signup-button button{
+    color: #fff;
+    background: #4267b2;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: all 0.4s ease; 
+}
+/*.container{
+    height: 36px;
+    width: 100%;
+}*/
+.form-container .form-content .signup-button{
+    float: right;
+    clear: both;
+}
+.form-container .form-content .signup-button button:hover{
+    background-color: #020da5;
+}
+/*    Sign up Button CSS End     */
+
+
+
+
+/* .demo {
     background-color: #000000;
     border-radius: 2px;
     border-color: #000000;
-    border: 2px #020da5;
+    border: #020da5;
     border-style: solid ;
-}
+    font-size: large;
+} */
