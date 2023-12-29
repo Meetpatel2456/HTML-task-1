@@ -1,12 +1,12 @@
 *{
-    margin: 0;
-    padding: 0;
+    min-width: auto;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 /*   Body CSS    */
 body{
     min-height: 100vh;
+    min-width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,6 +27,10 @@ body{
 .header a{
     text-decoration: none;
 }
+.header{
+    width: 100%;
+    min-width: auto;
+}
 
   /*   Try Bussiness Link  CSS   */
 .header .bn-dropbox{
@@ -38,22 +42,22 @@ body{
     border-radius: 5px;
     font-weight: 600;
 }
-@media screen and (max-width: 950px){
+/* @media screen and (max-width: 950px){
     .header .bn-dropbox{
         display: none;
     }
-}
+} */
     /*   Try Bussiness Link  CSS End   */
 
     /*   Logo and title CSS   */
 .header .dropbox{
     font-size: 34px; 
     position: relative;
-    z-index: 1;  
+    left: 25%;  
 }
 .fa-dropbox{
     color: #4267b2;
-    font-size: 480px;
+    font-size: 38px;
 }
 @media screen and (max-width: 940px) {
     .header .dropbox{
@@ -68,11 +72,11 @@ body{
     float: right;
     margin-right: 30px;
 }
-@media screen and (max-width: 960px){
+/* @media screen and (max-width: 960px){
     .header .dn-dropbox{
         display: none;
     }
-}
+} */
     /*   Download Link CSS End   */
 
 
@@ -80,34 +84,47 @@ body{
 
 /*     From CSS      */
 .from .form-container{
+    min-width: auto;
+    position: fixed;
     height: 100%;
     width:100%;
     margin-top: 14%;
-    z-index: 99;
+    z-index: 2;
+    overflow: auto;
 }
 
 .form .form-content{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 10%;
+}
+
+/*    profile image CSS   */
+@media screen and (min-width: 840px){
+    .form-content .image{
+        height: 40%;
+        width: 100%;
+    }
 }
 .form-content .login-form,
-.form-content .image-profile{
+.form-content .image{
     width:calc(100% / 2 -25px);
 }
-@media screen and (max-width: 800px) {
-    .form-content .image-profile .profile{
+@media screen and (max-width: 840px) {
+    .form-content .image img{
         display: none;
     }
 }
+/*    profile image CSS End   */
 
-
+/*         Login Form CSS      */
 .form-content .login-form{
-    width: 40%;
+    width: 80%;
     position: relative;
-    left: 5%;
 }
 
+/*     Title CSS      */
 .form-container .form-content .title{
     width: 100%;
     display: inline-flex;
@@ -124,7 +141,7 @@ body{
 }
 
 /*     Sign up Link CSS    */
-.form-container .form-content .title span{
+.form-container .form-content .title .create-account{
     font-size: 16px;
     display: flex;
     position: absolute;
@@ -133,26 +150,26 @@ body{
     margin: 2px;
     transform: translateY(-50%);
 }
-.form-container .form-content .title span a{
+.form-container .form-content .title .create-account a{
     text-decoration: none;
     color: #4267b2;
 }
-.form-container.form-content .title span a:hover{
+.form-container.form-content .title .create-account a:hover{
     color: #020da5;
 }
 /*     Sign up Link CSS End    */
 
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
     .form-content .title .t-title{
         display: none;
     }
-}
+} */
 @media screen and (max-width: 800px) {
-    .form-content .title span{
+    .form-content .title .create-account{
         display: flex;
     }
 }
-
+/*   Tilte CSS End    */
 
 /*  Google Log in Button CSS   */
 .form-container .form-content .google-signin a{
@@ -171,9 +188,7 @@ body{
 .form-container .form-content .google-signin a:hover{
     background-color: #2555b5;
 }
-.form-container .form-content .google-signin a i{
-    color: #fff;
-}
+
 .form-container .form-content .google-signin a .fa-google{
     color: #fff;
     font-size: 20px;
@@ -223,17 +238,16 @@ form .form-content .apple-signin a i{
     left: 15px;
     transform: translateY(-50%);
 }
-
-
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
     .form-content .google-signin span{
         display: none;
     }
     .form-content .apple-signin span{
         display: none;
     }
-}
+} */
 /*    Apple Sign in Button CSS End*/
+
 .line {
     position: relative;
     height: 1px;
@@ -264,20 +278,20 @@ form .form-content .apple-signin a i{
     margin: 15px 0;
 }
 /*    Email & Password Input Field CSS    */
-.form-content .input-box input{
+.form-content .input-box .input-field{
     height: 100%;
     width: 100%;
     outline: none;
     padding: 0 30px;
     font-size: 18px;
 }
-.form-content .input-box input:focus{
+.form-content .input-box .input-field:focus{
     border-color: #6a6a6a;
 }
 /*    Email & Password Input Field CSS End    */
 
 /*    checkbox CSS    */
-.form-container .form-content .checkbox input{
+.form-container .form-content .checkbox .input-field{
     margin-right: 5px;
     margin-top: 20px;
     margin-bottom: 30px;
@@ -301,7 +315,7 @@ form .form-content .apple-signin a i{
 /*form.form-content .group{
     display: inline-flex;
 }*/
-.form-container .form-content .login-button button{
+.form-container .form-content .login-button .signin-button{
     color: #fff;
     background: #4267b2;
     font-size: 18px;
@@ -313,7 +327,7 @@ form .form-content .apple-signin a i{
     transition: all 0.4s ease;
     
 }
-.form-container .form-content .login-button button:hover{
+.form-container .form-content .login-button .signin-button:hover{
     background-color: #020da5;
 }
 /*    Login Button CSS End     */
@@ -322,7 +336,7 @@ form .form-content .apple-signin a i{
 
 
 /*    Sign up Button CSS      */
-.form-container .form-content .signup-button button{
+.form-container .form-content .signup-button .signin-button{
     color: #fff;
     background: #4267b2;
     font-size: 18px;
